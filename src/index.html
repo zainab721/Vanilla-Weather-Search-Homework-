@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel = "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-night.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"/>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="index.js" href = "index.js">
+    <link rel="stylesheet" href="styles.css">
+    <title> Weather App </title>
+</head>
+
+<body>
+    <div class = "weather-app" >
+    <header>
+       <form class ="search-form" id ="search-form">
+             <input 
+             type = "Search"
+             placeholder = "Enter a City... "
+             required 
+             id = "search-form-input"
+             class = "search-form-input"
+             />
+             <input type = "Submit" value ="Search" class="search-form-button" />
+            </form>
+        </header>
+    <main>
+    <div calss="weather-app-data">
+        <br>
+    <div>
+    <h1 class ="weather-app-city"  id="city"> Dallas</h1>
+<p class ="weather-app-details">
+            <span  id = "current-day">Friday</span>
+            <span id = "current-time">11:49</span>
+            <span id="current-date">January, 11</span>
+            <span id = "discription">Moderate Rain</span>
+    <br />
+       Humidity: <strong id="Humidity">87%</strong>,
+       Wind: <strong id=" wind-speed">7.2km/h</strong>
+</p>
+<div>
+        <div class ="weather-app-temperature-container">  
+        <div class = "weather-app-icon"> </div>
+        <div class="weather-app-temperature" id="temperature">24</div>
+        <div class = "weather-app-unit">°c</div>
+        <img 
+        src ="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-night.png", />
+</div>
+</div>
+</main>
+<footer>
+    This Project is Coded by 
+    <a href ="https://github.com/zainab721/ " target  = "_ blank ">Zainab Mohammad</a>
+    <div>
+    Code is
+    <a href ="https://github.com/zainab721/Weather-App-Week-7-lesson-2/ " target  = "_ blank " >
+    open-sourced on Github</a>
+    and 
+    <a href ="https://app.netlify.com/signup/start/connect/repos/zainab721%2FWeather-App-Week-7-lesson-2/" target = "_ blank ">
+    Hosted on Netlify</a></div>
+</footer>
+</div>
+</body>
+<script src="index.js"></script>
+</html>
