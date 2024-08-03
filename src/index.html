@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="style.css">
     <title> Weather App </title>
 </head>
-
 <body>
     <div class = "weather-app" >
     <header>
@@ -30,92 +29,77 @@
             </form>
         </header>
     <main>
-    <div calss="current-weather">
+    <div calss="weather-app-data">
     <div>
     <h1 class ="weather-app-city"  id="city"> Dallas</h1>
 <p class ="weather-app-details">
-            <div id="current-day">Friday</div>
-            <div id="current-time">11:49</div>
-            <div id="current-date">August, 11</div>
+            <div id="day">Friday</div>
+            <div id="time">11:49</div>
+            <div id="date">August, 11</div>
             <div id="discription">Moderate Rain</div>
     <br />
        Humidity: <strong id="Humidity">87%</strong>,
        Wind: <strong id=" wind-speed">7.2km/h</strong>
 </p>
-<div class="current-temperature">
+<div class="class="weather-app-temperature-container></div>
+<div id="icon"></div>
     <span class="current-temperature-icon">☀️</span>
-    <span class="current-temperature-value" id="current-temperature"
-      >24</span
-    ><span class="current-temperature-unit">°C</span>
+    <span class="current-temperature-value" id="temperature">24</span>
+    <span class="current-temperature-unit">°C</span>
   </div>
-</div>
 <div>
-    <div class="weather-app-forecast-day">
-        <div class="weather-app-forecast-date">Tue</div>
-            <div class="weather-app-forecast-icon">🌤</div>
-            <div class="weather-app-forecast-tempratures"><div>
-                <div class="weather-app-forecast-temprature">
-                    <div>
-                     <stronge>15°</stronge></div>
+    <div class="weather-forecast">
+    <div class="weather-forecast-day">
+        <div class="weather-forecast-date">Tue</div>
+            <div class="weather-forecast-icon">🌤</div>
+            <div class="weather-forecast-temperatures">
+                <div class="weather-forecast-temperature">
+                     <strong>15°</strong>
                 </div>
-               <div>
                 <div class="weather-forecast-temeprature">9°</div>
             </div>
-            </div>
-    </div>
-</div>
-    <div class="weather-app-forecast-day">
-        <div class="weather-app-forecast-date">Wed</div>
-            <div class="weather-app-forecast-icon">☀️</div>
-            <div class="weather-app-forecast-tempratures"></div>
-                <div class="weather-app-forecast-temprature">
-                <div>
-                     <stronge>20°</stronge>
-                </div>
-                <div>
+        </div>
+    <div class="weather-forecast-day">
+        <div class="weather-forecast-date">Wed</div>
+            <div class="weather-forecast-icon">☀️</div>
+            <div class="weather-forecast-temperatures">
+                <div class="weather-forecast-temperature">
+                     <strong>20°</strong>
+               </div>
                 <div class="weather-forecast-temperature">10°</div>
             </div>
-            </div>
-</div>
-    <div class="weather-app-forecast-day">
-        <div class="weather-app-forecast-date">Thu</div>
-            <div class="weather-app-forecast-icon">🌧️</div>
-            <div class="weather-app-forecast-tempratures"><div>
-                <div class="weather-app-forecast-temprature">
-                <div>
-                    <stronge>25°</stronge>
+        </div>
+    <div class="weather-forecast-day">
+        <div class="weather-forecast-date">Thu</div>
+            <div class="weather-forecast-icon">🌧️</div>
+            <div class="weather-forecast-temperatures">
+                <div class="weather-forecast-temperature">
+                    <strong>25°</strong>
                 </div>
-                </div>
-                <div class="weather-app-forecast-temprature">12°</div>
+                <div class="weather-forecast-temperature">12°</div>
                 </div>
             <div>
-</div>
-    <div class="weather-app-forecast-day">
-        <div class="weather-app-forecast-date">Fri</div>
-            <div class="weather-app-forecast-icon">🌪️</div>
-            <div class="weather-app-forecast-tempratures"><div>
-                <div class="weather-app-forecast-temprature">
-                <div>
-                    <stronge>13°</stronge>
+    <div class="weather-forecast-day">
+        <div class="weather-orecast-date">Fri</div>
+            <div class="weather-forecast-icon">🌪️</div>
+            <div class="weather-forecast-temperatures">
+                <div class="weather-forecast-temperature">
+                    <strong>13°</strong>
                 </div>
-                <div class="weather-forecast-temprature">7°</div>
-                </div>
+                <div class="weather-forecast-temperature">7°</div>
                 <div>
             </div>
-</div>
-    <div class="weather-app-forecast-day">
-        <div class="weather-app-forecast-date">Sat</div>
-            <div class="weather-app-forecast-icon">☔</div>
-            <div class="weather-app-forecast-tempratures"></div>
-                <div class="weather-app-forecast-temprature">
-                <div>
-                    <stronge>19°</stronge>
+    <div class="weather-forecast-day">
+        <div class="weather-forecast-date">Sat</div>
+            <div class="weather-forecast-icon">☔</div>
+            <div class="weather-forecast-temperatures">
+                <div class="weather-forecast-temperature">
+                    <strong>19°</strong>
                 </div>
-                <div class="weather-forecast-temprature">11°</div>
+                <div class="weather-forecast-temperature">11°</div>
                 </div>
-                <div>
-                    
-</div>
+            </div>
+        </div>
 </main>
 <br>
 <footer>
