@@ -65,21 +65,46 @@ axios.get(apiUrl).then(displayTemperature);
 searchCity(searchInput.value);
 getForecast(response.data.city);
   
-  function getForecast(city)   {
-  apiKey = "e095dc345c934o5ae8fb54ctcbb40bf0";
-  apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios(apiUrl).then(displayForecast);
-    }
+function formatDay (timestamp)    {
+let date  = new date(timestamp * 1000);
+let days = ["Sun", "Mon"," Tue", "Wed", "Thu", "Fri", "Sat"]
+
+return days(date.getDay());
+}
+
+  function displayForecast(response);  
+  let  forecasttHTML = "";
+
+  response.data.daily.forEach(function (day,  index))  
+  if (index <  5); 
+   
+  days.forEach(function (day) {
+      forecastHtml =
+          forecastHtml + `
+
+    <div class="weather-forecast-day">
+        <div class="weather-forecast-date">${formatDay(day.time)}</div>
+        <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
+            <div class="weather-forecast-temperatures">
+                <div class="weather-forecast-temperature">
+                     <strong> ${Math.round(day.temperature.maximum)}º</strong>
+                </div>
+                <div class="weather-forecast-temeprature">{Math.round(
+                  day.temperature.minimum
+            )}°</div>
+        </div>
+     </div>
+    `;  
+  });
+  let forecastElement = document.querySelector("#forecast"); 
+  forecastElement.innerHTML = forecastHtml;
+
   
-  function displayForecast(response)  {
-  
-  }
-  
-function searchCity(city) {
+function searchCity(city) 
   let apiKey = "e095dc345c934o5ae8fb54ctcbb40bf0";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
   axios.get(apiUrl).then(refreshWeather);
-}
+
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
@@ -93,4 +118,13 @@ let searchFormElement = document.querySelector("#search-form");
 earchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Paris");
+getForecast("Paris");
 displayForecast();
+
+
+function getForecast(city)   {
+  apiKey = "e095dc345c934o5ae8fb54ctcbb40bf0";
+  apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+    }
+  
