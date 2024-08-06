@@ -81,15 +81,15 @@ return days(date.getDay());
 
 let forecastHTML = "";
 
-  response.data.daily.forEach(function (day,  index)) {
+  response.data.daily.forEach(function (day,  index) {
       if (index <  5); {
-
         forecastHTML =
-          forecastHTML + `
-        
+          forecastHTML + 
+          `
           days.forEach(function (day) {
     <div class="weather-forecast-day">
         <div class="weather-forecast-date">${formatDay(day.time)}</div>
+        
         <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
             <div class="weather-forecast-temperatures">
                 <div class="weather-forecast-temperature">
@@ -101,8 +101,8 @@ let forecastHTML = "";
         </div>
      </div>
     `;  
- )}
- }
+   }
+  });
   let forecastElement = document.querySelector("#forecast"); 
   forecastElement.innerHTML = forecastHTML;
     
