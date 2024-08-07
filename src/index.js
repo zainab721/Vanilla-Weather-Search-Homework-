@@ -23,7 +23,7 @@ getForecast(response.data.city);
 function formatDate(date)  {
   let minutes = date.getMinutes();
   let hours = date.getHours();
-  let days =   [
+  let days =  [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -120,7 +120,7 @@ let forecastHtml = "";
      </div>
     `;  
   }
-  });
+});
   let forecastElement = document.querySelector("#forecast"); 
   forecastElement.innerHTML= forecastHtml; 
 }
@@ -141,5 +141,4 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 
-  
   
