@@ -23,7 +23,7 @@ getForecast(response.data.city);
 function formatDate(date)  {
   let minutes = date.getMinutes();
   let hours = date.getHours();
-  let days =[
+  let days =   [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -31,7 +31,7 @@ function formatDate(date)  {
     "Thursday",
     "Friday",
     "Saturday"
-  ];
+  ] ;
 
   let day = days[date.getDay()];
 
